@@ -16,7 +16,7 @@
         "sass": "^1.69.5",
         "sass-loader": "^13.3.2",
         "semver": "7.5.4",
-        "webpack": "5.89.0"
+        "webpack": "5.94.0"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -46,7 +46,7 @@
         "postcss": "8.4.31",
         "semver": "7.5.4",
         "tough-cookie": "4.1.3",
-        "webpack": "5.89.0"
+        "webpack": "5.94.0"
     },
     "homepage": ".",
     "postcss": {
