@@ -1,8 +1,9 @@
 import React from 'react'
-import RootComponent from './RootComponent'
+import './styles/main.sass'
+import HomePage from './pages/HomePage'
 
 const App: React.FC = () => {
-    return <RootComponent />
+    return <HomePage />
 }
 
 export default App

@@ -1,8 +1,10 @@
-import '@testing-library/react/dont-cleanup-after-each'
+/* eslint-disable react/react-in-jsx-scope */
+import { TextEncoder } from 'util'
 import { cleanup, render, screen, fireEvent } from '@testing-library/react'
-import { BrowserRouter as Router } from 'react-router-dom'
 import HomePage from '../../pages/HomePage'
 import { models } from '../../utility/options'
+
+global.TextEncoder = TextEncoder
 
 const mockAPIKey = 'api_keySample123784'
 
@@ -13,17 +15,12 @@ describe('HomePage - Page components', () => {
         jest.spyOn(console, 'error').mockImplementation(jest.fn())
     })
 
-    render(
-        <Router>
-            <HomePage />
-        </Router>
-    )
-
     afterAll(() => {
         cleanup()
     })
 
     it('Expect to have all starting components rendered', async () => {
+        render(<HomePage />)
         const selectElements = screen.getAllByRole('combobox')
         const inputElements = screen.getAllByRole('textbox')
         const submitButton = screen.getByRole('button')
@@ -41,6 +38,7 @@ describe('HomePage - Page components', () => {
     })
 
     it('Expect button to be enabled if all the entered values are valid', () => {
+        render(<HomePage />)
         const inputElements = screen.getAllByRole('textbox')
         const submitButton = screen.getByRole('button')
 
@@ -50,6 +48,7 @@ describe('HomePage - Page components', () => {
     })
 
     it('Expect no warnings if main button is disabled and you click on it', () => {
+        render(<HomePage />)
         const submitButton = screen.getByRole('button')
         fireEvent.click(submitButton)
 
