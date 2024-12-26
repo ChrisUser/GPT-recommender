@@ -3,20 +3,11 @@
     "version": "1.0.0",
     "private": true,
     "dependencies": {
-        "@testing-library/jest-dom": "^6.1.4",
-        "@testing-library/react": "^14.1.2",
-        "@testing-library/user-event": "^14.5.1",
-        "axios": "^0.28.0",
-        "eslint-plugin-prettier": "^5.0.1",
-        "nth-check": "2.1.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-router-dom": "^6.19.0",
-        "react-scripts": "5.0.1",
-        "sass": "^1.69.5",
-        "sass-loader": "^13.3.2",
-        "semver": "7.5.4",
-        "webpack": "5.94.0"
+        "axios": "^1.7.9",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-router-dom": "^7.1.1",
+        "react-scripts": "5.0.1"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -33,20 +24,18 @@
         "not IE 11"
     ],
     "devDependencies": {
-        "@types/jest": "^29.5.8",
-        "@types/node": "^20.9.2",
-        "@types/react": "^18.2.37",
-        "@types/react-dom": "^18.2.15",
-        "typescript": "^5.2.2"
-    },
-    "resolutions": {
-        "axios": "1.7.4",
-        "follow-redirects": "1.15.6",
-        "nth-check": "2.1.1",
-        "postcss": "8.4.31",
-        "semver": "7.5.4",
-        "tough-cookie": "4.1.3",
-        "webpack": "5.94.0"
+        "@testing-library/dom": "^10.4.0",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.1.0",
+        "@testing-library/user-event": "^14.5.2",
+        "@types/jest": "^29.5.14",
+        "@types/node": "^22.10.2",
+        "@types/react": "^19.0.2",
+        "@types/react-dom": "^19.0.2",
+        "eslint-plugin-prettier": "^5.2.1",
+        "typescript": "^5.7.2",
+        "sass": "^1.83.0",
+        "sass-loader": "^16.0.1"
     },
     "homepage": ".",
     "postcss": {

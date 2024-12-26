@@ -1,5 +1,6 @@
-@import './_variables'
-@import './_mixins'
+@use './_variables' as *
+@use './_mixins' as *
+@use "sass:color"
 
 *
   box-sizing: border-box
@@ -87,10 +88,10 @@ textarea
   color: $white
   
   &:hover
-    background-color: lighten($blue, 4%)
+    background-color: color.adjust($blue, $lightness: 4%)
 
   &:active
-    background-color: lighten($blue, 10%)
+    background-color: color.adjust($blue, $lightness: 10%)
 
   &:disabled,
   &:disabled:hover
@@ -103,15 +104,15 @@ textarea
   color: $black
 
   &:hover
-    background-color: darken($white, 6%)
+    background-color: color.adjust($white, $lightness: -6%)
 
   &:active
-    background-color: darken($white, 10%)
+    background-color: color.adjust($white, $lightness: -10%)
 
 .o-error-text-container
   font-weight: bold
   letter-spacing: 0.6px
-  color: darken($red, 14%)
+  color: color.adjust($red, $lightness: -14%)
   background: rgba($red, 0.16)
   border: 1px solid $red
   border-radius: $main-border-radius
